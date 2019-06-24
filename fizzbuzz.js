@@ -1,5 +1,7 @@
+const userInput = require('./userInputs');
+
 const start = 1;
-const end = 100;
+const end = userInput.getNumber('Please enter the number to print up to:');
 
 for (let i = start; i <= end; i++) {
 
