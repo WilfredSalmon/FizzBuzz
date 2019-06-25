@@ -11,6 +11,10 @@ for (let i = start; i <= end; i++) {
         response.push('Fizz');
     }
 
+    if (i % 13 === 0) {
+        response.push('Fezz');
+    }
+
     if (i % 5 === 0) {
         response.push('Buzz');
     }
@@ -20,18 +24,11 @@ for (let i = start; i <= end; i++) {
     }
 
     if (i % 11 === 0) {
-        response = ['Bong'];
-    }
 
-    if (i % 13 === 0) {
-        const beginsWithB = response.map(value => value[0]==='B');
-        const index = beginsWithB.indexOf(true);
-
-        if (index === -1) {
-            response.push('Fezz');
-        }
-        else {
-            response.splice(index,0,'Fezz');
+        if (response.indexOf('Fezz') >= 0) {
+            response = ['Fezz','Bong'];
+        } else {
+            response = ['Bong'];
         }
     }
 
